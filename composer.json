@@ -1,0 +1,22 @@
+{
+    "name": "simplerouter/router",
+    "description": "a simple router api",
+    "authors": [
+        {
+            "name": "Tarcísio Thallys",
+            "email": "tarcisio_thallys@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"classmap": [],
+    	"psr-4": {
+    		"Config\\": "config/",
+    		"Controllers\\": "controllers/",
+    		"Controllers\\Api\\": "controllers/api/",
+    		"Views\\": "views/",
+    		"Models\\": "models/"
+    	},
+    	"files": []
+    }
+}

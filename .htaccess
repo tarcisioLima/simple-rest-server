@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+
+    RewriteCond %{REQUEST_URI} ^/api
+    RewriteRule ^api/([A-Za-z]+)/([A-Za-z]+)/?$ app.php?classe=$1&met=$2
+    RewriteRule ^api/([A-Za-z]+)/([A-Za-z]+)/(.*)/?$ app.php?classe=$1&met=$2&arg0=$3 [L]
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?url=$1 [L]
+    
+    Options -Indexes
+</IfModule>
+
+
+
+
+
+
+
+
+
